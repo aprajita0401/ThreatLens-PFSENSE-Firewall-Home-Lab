@@ -49,17 +49,18 @@ observations.
 
 ## Test record
 
-  Field             Record
-  ----------------- -----------------------------------------------
-  Test ID           `[e.g., TL-FW-01]`
-  Date              `[YYYY-MM-DD]`
-  Source host       `[Kali address / lab identifier]`
-  Target host       `[Ubuntu address / lab identifier]`
-  Rule tested       `[rule ID and description]`
-  Expected result   `[what should happen]`
-  Observed result   `[what actually happened]`
-  Evidence          `[relative path to screenshots/log excerpts]`
-  Status            `[Pass / Fail / Inconclusive]`
+| Field           | Record                                        |
+| --------------- | --------------------------------------------- |
+| Test ID         | `[e.g., TL-FW-01]`                            |
+| Date            | `[YYYY-MM-DD]`                                |
+| Source host     | `[Kali address / lab identifier]`             |
+| Target host     | `[Ubuntu address / lab identifier]`           |
+| Rule tested     | `[rule ID and description]`                   |
+| Expected result | `[what should happen]`                        |
+| Observed result | `[what actually happened]`                    |
+| Evidence        | `[relative path to screenshots/log excerpts]` |
+| Status          | `[Pass / Fail / Inconclusive]`                |
+
 
 ## Redaction before publishing
 
