@@ -27,9 +27,9 @@ on WAN simply because an example says so.
 
  | Rule ID | Interface  | Action | Protocol   | Source                             | Destination                    | Logging                                   | Purpose / Status                                       |
 | ------- | ---------- | ------ | ---------- | ---------------------------------- | ------------------------------ | ----------------------------------------- | ------------------------------------------------------ |
-| FW-01   | `[verify]` | Pass   | `TCP` | `[trusted management host/subnet]` | `[pfSense management address]` | `[verify]`                                | Restricted management access, if configured            |
-| FW-02   | `[verify]` | Pass   | `TCP` | `[Kali test host]`                 | `[Ubuntu target]`              | `[verify]`                                | Temporary lab allowance, only if required for the test |
-| FW-03   | `[verify]` | Block  | `ICMP (any)` | `[Kali test host]`                 | `[Ubuntu target]`              | Enabled if supported by the selected test | Block the test traffic                                 |
+| FW-01   | LAN | Pass   | TCP | [trusted management subnet] | [pfSense management address] | Enabled if supported by the selected test| Restricted management access, if configured            |
+| FW-02   | WAN | Pass   | TCP | Kali IP                 | Ubuntu WAN IP            |Enabled if supported by the selected test| Temporary lab allowance, only if required for the test |
+| FW-03   | WAN | Block  | ICMP (any) | Kali IP                 | Ubuntu WAN IP              | Enabled if supported by the selected test | Block the test traffic                                 |
 
 **Important:** These are documentation placeholders, not instructions to
 copy blindly. Replace every `[verify]` value with the rule actually
