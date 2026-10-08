@@ -32,7 +32,7 @@ for machines to share the same internal network.
 ## Interface inventory
 
 | VM | Adapter | VirtualBox Mode / Network Name | Interface Name | 
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | **pfSense**<br> | 1 | Bridged | WAN |
 | **pfSense**<br> | 2 | Internal Network: intNet | LAN |
 | **Kali Linux**<br> | 1 | Bridged | eth0 | 
