@@ -19,21 +19,12 @@ prove that a rule was tested successfully.
 
 ## Rule inventory
 
-Document each relevant rule in the table below. The project PDF
-describes an initial rule to permit test traffic and a later rule
-intended to block traffic from Kali to Ubuntu. Verify the actual
-interface and packet path in your own lab; do not assume a rule belongs
-on WAN simply because an example says so.
 
  | Rule ID | Interface  | Action | Protocol   | Source                             | Destination                    | Logging                                   | Purpose / Status                                       |
 | ------- | ---------- | ------ | ---------- | ---------------------------------- | ------------------------------ | ----------------------------------------- | ------------------------------------------------------ |
-| FW-01   | LAN | Pass   | TCP | [trusted management subnet] | [pfSense management address] | Enabled if supported by the selected test| Restricted management access, if configured            |
+| FW-01   | LAN | Pass   | TCP | trusted management subnet | pfSense management address | Enabled if supported by the selected test| Restricted management access, if configured            |
 | FW-02   | WAN | Pass   | TCP | Kali IP                 | Ubuntu WAN IP            |Enabled if supported by the selected test| Temporary lab allowance, only if required for the test |
 | FW-03   | WAN | Block  | ICMP (any) | Kali IP                 | Ubuntu WAN IP              | Enabled if supported by the selected test | Block the test traffic                                 |
-
-**Important:** These are documentation placeholders, not instructions to
-copy blindly. Replace every `[verify]` value with the rule actually
-present in your lab. Remove rows for rules you did not configure.
 
 ## Rule order and validation
 
