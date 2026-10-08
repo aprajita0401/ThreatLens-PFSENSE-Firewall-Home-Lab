@@ -24,25 +24,15 @@ reviewing logs to validate the rule's effect.
 
 ## Technology Stack
 
-  -----------------------------------------------------------------------
-  Technology                          Role
-  ----------------------------------- -----------------------------------
-  Oracle VirtualBox                   Hosts the virtual machines and
-                                      virtual network adapters
+| Technology        | Role                                                    |
+| ----------------- | ------------------------------------------------------- |
+| Oracle VirtualBox | Hosts the virtual machines and virtual network adapters |
+| pfSense           | Firewall, routing, filtering, and traffic logging       |
+| Kali Linux        | Source of controlled test traffic                       |
+| Ubuntu            | Target host and packet-capture system                   |
+| Wireshark         | Packet capture and protocol analysis                    |
+| hping3            | Generates crafted test packets                          |
 
-  pfSense                             Firewall, routing, filtering, and
-                                      traffic logging
-
-  Kali Linux                          Source of controlled test traffic
-
-  Ubuntu                              Target host and packet-capture
-                                      system
-
-  Wireshark                           Packet capture and protocol
-                                      analysis
-
-  hping3                              Generates crafted test packets
-  -----------------------------------------------------------------------
 
 ## Lab Architecture
 
