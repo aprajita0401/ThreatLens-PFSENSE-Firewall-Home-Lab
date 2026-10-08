@@ -25,26 +25,11 @@ intended to block traffic from Kali to Ubuntu. Verify the actual
 interface and packet path in your own lab; do not assume a rule belongs
 on WAN simply because an example says so.
 
-  -------------------------------------------------------------------------------------------------------------------------------------------
-  Rule ID  Interface    Action   Protocol     Source                               Destination                      Logging      Purpose /
-                                                                                                                                 Status
-  -------- ------------ -------- ------------ ------------------------------------ -------------------------------- ------------ ------------
-  FW-01    `[verify]`   Pass     `[verify]`   `[trusted management host/subnet]`   `[pfSense management address]`   `[verify]`   Restricted
-                                                                                                                                 management
-                                                                                                                                 access, if
-                                                                                                                                 configured
-
-  FW-02    `[verify]`   Pass     `[verify]`   `[Kali test host]`                   `[Ubuntu target]`                `[verify]`   Temporary
-                                                                                                                                 lab
-                                                                                                                                 allowance,
-                                                                                                                                 only if
-                                                                                                                                 required for
-                                                                                                                                 the test
-
-  FW-03    `[verify]`   Block    `[verify]`   `[Kali test host]`                   `[Ubuntu target]`                Enabled if   Block the
-                                                                                                                    supported by selected
-                                                                                                                    the test     test traffic
-  -------------------------------------------------------------------------------------------------------------------------------------------
+ | Rule ID | Interface  | Action | Protocol   | Source                             | Destination                    | Logging                                   | Purpose / Status                                       |
+| ------- | ---------- | ------ | ---------- | ---------------------------------- | ------------------------------ | ----------------------------------------- | ------------------------------------------------------ |
+| FW-01   | `[verify]` | Pass   | `[verify]` | `[trusted management host/subnet]` | `[pfSense management address]` | `[verify]`                                | Restricted management access, if configured            |
+| FW-02   | `[verify]` | Pass   | `[verify]` | `[Kali test host]`                 | `[Ubuntu target]`              | `[verify]`                                | Temporary lab allowance, only if required for the test |
+| FW-03   | `[verify]` | Block  | `[verify]` | `[Kali test host]`                 | `[Ubuntu target]`              | Enabled if supported by the selected test | Block the test traffic                                 |
 
 **Important:** These are documentation placeholders, not instructions to
 copy blindly. Replace every `[verify]` value with the rule actually
