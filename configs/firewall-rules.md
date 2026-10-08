@@ -47,7 +47,7 @@ Do not claim that the attack was mitigated solely because the rule
 exists. Correlate the rule, log entries, and packet-capture
 observations.
 
-## Test record
+## Example Test record
 
 | Field           | Record                                        |
 | --------------- | --------------------------------------------- |
