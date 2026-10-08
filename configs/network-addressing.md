@@ -2,45 +2,32 @@
 
 This document records the addressing and VirtualBox network design for
 the ThreatLens lab. The project documentation includes example private
-addresses, but your actual values may differ. **Verify all interface
-names, adapter modes, addresses, routes, and DHCP settings in your
-completed environment before publishing this file.**
+addresses, but your actual values may differ. 
 
 ## Topology summary
 
-  -----------------------------------------------------------------------
-  Component               Intended role           Network connection
-                                                  described in project
-                                                  documentation
-  ----------------------- ----------------------- -----------------------
-  pfSense                 Firewall/router between Adapter 1: Bridged WAN;
-                          WAN and internal LAN    Adapter 2: Internal
-                                                  Network `LabNet`
+ | Component | Intended Role | Network Connection Described in Project Documentation |
+| --- | --- | --- |
+| **pfSense** | Firewall/router between WAN and internal LAN
 
-  Kali Linux              Controlled test-traffic Bridged adapter is
-                          source                  described in the PDF;
-                                                  verify whether this is
-                                                  the final safe lab
-                                                  topology
+ | Adapter 1: Bridged WAN; Adapter 2: Internal Network `LabNet`<br> |
+| **Kali Linux** | Controlled test-traffic source
 
-  Ubuntu                  Target host and         Internal Network is
-                          Wireshark capture       described; the PDF uses
-                          system                  the name `intnet`
+ | Bridged adapter is described in the PDF; verify whether this is the final safe lab topology
 
-  VirtualBox host         Runs the virtual        Physical network
-                          machines                adapter and VirtualBox
-                                                  virtual networks
-  -----------------------------------------------------------------------
+ |
+| **Ubuntu** | Target host and Wireshark capture system
 
-The PDF uses both `LabNet` and `intnet` as internal-network names in
+ | Internal Network is described; the PDF uses the name `intnet`<br> |
+| **VirtualBox Host** | Runs the virtual machines
+
+ | Physical network adapter and VirtualBox virtual networks|
+
+The PDF uses `intnet` as internal-network names in
 different setup sections. VirtualBox internal network names must match
-for machines to share the same internal network. Check your actual
-adapter settings and document the final names consistently.
+for machines to share the same internal network. 
 
 ## Addressing plan
-
-The PDF provides these example values. Treat them as **examples from the
-documentation**, not confirmed values from your completed lab.
 
   ---------------------------------------------------------------------------------
   Network item            Address / range in the PDF        Notes
